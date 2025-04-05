@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-container .item {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 50px; /* Increased size */
+            text-align: center;
+            font-size: 1.2rem; /* Slightly larger text */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+ .grid-container .item {
+                padding: 40px; /* Slightly smaller boxes for smaller screens */
+            }
+        }
+
+        @media (min-width: 769px) {
+.grid-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .grid-container .item {
+                padding: 70px; /* Larger boxes for desktop screens */
+            }
+        }
+.navbar a:hover {
+    color: #feb47b; /* Highlight on hover */
+    text-decoration: underline;
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+footer a {
+    color: #feb47b;
+    text-decoration: none;
+}
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="grid-container">
+            <div class="item">Box 1</div>
+            <div class="item">Box 2</div>
+            <div class="item">Box 3</div>
+            <div class="item">Box 4</div>
+        </section>
+    </main>
+</body>
+<footer>
+    <p>&copy; 2025 Your Website | Follow us: 
+        <a href="https://web.facebook.com/">Facebook</a> | <a href="https://x.com/duncanmmutua">X</a>
+    </p>
+</footer>
+</html>
